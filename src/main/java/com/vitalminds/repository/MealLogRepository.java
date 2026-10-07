@@ -1,0 +1,1 @@
+package com.vitalminds.repository; import com.vitalminds.model.MealLog; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface MealLogRepository extends JpaRepository<MealLog,Long>{List<MealLog> findTop12ByUserIdOrderByDateDesc(Long id);}

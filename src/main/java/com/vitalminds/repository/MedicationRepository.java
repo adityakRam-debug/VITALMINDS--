@@ -1,0 +1,1 @@
+package com.vitalminds.repository; import com.vitalminds.model.Medication; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface MedicationRepository extends JpaRepository<Medication,Long>{ List<Medication> findTop8ByUserIdAndActiveTrueOrderByNameAsc(Long userId); Optional<Medication> findByIdAndUserId(Long id,Long userId); }

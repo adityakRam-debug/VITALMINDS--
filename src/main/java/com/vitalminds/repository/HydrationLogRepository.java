@@ -1,0 +1,1 @@
+package com.vitalminds.repository; import com.vitalminds.model.HydrationLog; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface HydrationLogRepository extends JpaRepository<HydrationLog,Long>{List<HydrationLog> findTop14ByUserIdOrderByDateDesc(Long id);}

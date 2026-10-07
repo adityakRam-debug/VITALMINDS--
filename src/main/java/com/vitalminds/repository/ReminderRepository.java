@@ -1,0 +1,1 @@
+package com.vitalminds.repository; import com.vitalminds.model.Reminder; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface ReminderRepository extends JpaRepository<Reminder,Long>{ List<Reminder> findTop8ByUserIdAndActiveTrueOrderByReminderTimeAsc(Long userId); Optional<Reminder> findByIdAndUserId(Long id,Long userId); }

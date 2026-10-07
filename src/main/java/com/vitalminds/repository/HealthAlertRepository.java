@@ -1,0 +1,1 @@
+package com.vitalminds.repository; import com.vitalminds.model.HealthAlert; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface HealthAlertRepository extends JpaRepository<HealthAlert,Long>{List<HealthAlert> findTop8ByUserIdOrderByCreatedAtDesc(Long id); long countByUserIdAndReadFlagFalse(Long id);}

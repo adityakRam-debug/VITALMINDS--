@@ -1,0 +1,3 @@
+package com.vitalminds.controller;
+import com.vitalminds.repository.*; import org.springframework.stereotype.Controller; import org.springframework.ui.Model; import org.springframework.web.bind.annotation.GetMapping;
+@Controller public class AdminController {private final UserRepository users;private final HealthRecordRepository reports;private final HealthAlertRepository alerts;public AdminController(UserRepository u,HealthRecordRepository r,HealthAlertRepository a){users=u;reports=r;alerts=a;}@GetMapping("/admin") public String admin(Model m){m.addAttribute("users",users.findAll());m.addAttribute("userCount",users.count());m.addAttribute("reportCount",reports.count());m.addAttribute("alertCount",alerts.count());return "admin";}}

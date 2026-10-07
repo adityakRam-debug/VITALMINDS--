@@ -1,0 +1,1 @@
+package com.vitalminds.repository; import com.vitalminds.model.WorkoutPlan; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface WorkoutPlanRepository extends JpaRepository<WorkoutPlan,Long>{List<WorkoutPlan> findTop10ByUserIdOrderByDateDesc(Long id);}
